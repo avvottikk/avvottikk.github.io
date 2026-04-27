@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ciklum — Artem Kharin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .proj-wrap { max-width: 800px; margin: 0 auto; padding: 0 32px 120px; }
+  .proj-back { padding: 32px 0 48px; }
+  .proj-back a {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.82rem; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.2s ease;
+  }
+  .proj-back a:hover { color: var(--text); }
+  .proj-header {
+    display: flex; align-items: center; gap: 28px;
+    padding-bottom: 48px; border-bottom: 1px solid var(--border); margin-bottom: 56px;
+  }
+  .proj-logo {
+    width: 120px; height: 64px; flex-shrink: 0;
+    background: #fff; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px 14px; overflow: hidden;
+  }
+  .proj-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .proj-company { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 4px; }
+  .proj-role    { font-size: 1rem; color: var(--muted); margin-bottom: 6px; }
+  .proj-period  { font-size: 0.82rem; color: var(--muted); opacity: 0.7; }
+  .proj-section { margin-bottom: 52px; }
+  .proj-section h2 {
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 20px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  }
+  .proj-section p  { color: var(--text); line-height: 1.75; margin-bottom: 14px; }
+  .proj-section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+  .proj-section ul li {
+    padding-left: 20px; position: relative;
+    color: var(--text); line-height: 1.7; font-size: 0.95rem;
+  }
+  .proj-section ul li::before {
+    content: ''; position: absolute; left: 0; top: 10px;
+    width: 4px; height: 4px; border-radius: 50%; background: #F9A800;
+  }
+  .proj-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .proj-tag {
+    padding: 6px 14px; border-radius: 4px; border: 1px solid var(--border);
+    font-size: 0.8rem; color: var(--muted); background: var(--elevated);
+  }
+</style>
+</head>
+<body>
+<div class="proj-wrap">
+
+  <div class="proj-back">
+    <a href="../index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+
+  <div class="proj-header">
+    <div class="proj-logo">
+      <img src="../CIKLUM.png" alt="Ciklum" />
+    </div>
+    <div>
+      <div class="proj-company">Ciklum</div>
+      <div class="proj-role">Middle QA Engineer</div>
+      <div class="proj-period">2015 — 2016 · Kyiv, Ukraine</div>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <h2>Overview</h2>
+    <p><a href="https://www.ciklum.com/" target="_blank" rel="noopener" style="color:#F9A800;text-decoration:none;border-bottom:1px solid rgba(249,168,0,0.4);transition:border-color 0.2s ease;" onmouseover="this.style.borderColor='#F9A800'" onmouseout="this.style.borderColor='rgba(249,168,0,0.4)'">Ciklum</a> is a global software engineering and solutions company. I worked as a Middle QA Engineer embedded in a product team, owning the full QA process for desktop and Unity3D-based applications — from test documentation to CI integration and automation framework development.</p>
+  </div>
+
+  <div class="proj-section">
+    <h2>What I Did</h2>
+    <ul>
+      <li>Ensured quality across multiple functional areas, actively participating in the full development lifecycle — planning, testing, documentation, and cross-team collaboration; worked with development and community teams to provide early feedback and test new features.</li>
+      <li>Took ownership of the QA process and feature validation; conducted manual testing (regression, smoke, functional, UI/UX) for desktop and Unity3D applications, and executed hands-on desktop application testing for functionality, stability, and performance.</li>
+      <li>Designed and maintained test documentation for Unity3D projects, including test cases, test suites, and automation team docs; assisted in resolving simple auto test issues to maintain smooth CI integration.</li>
+      <li>Played a key role in developing the automation testing framework for Unity3D components, streamlining test execution and improving accuracy.</li>
+      <li>Collaborated with Product Management, developers, and QA teams to identify and validate requirements, assess risks, and align testing strategies with development goals.</li>
+      <li>Managed defect tracking and resolution, ensuring timely reporting, communication, and issue resolution across all stakeholders.</li>
+    </ul>
+  </div>
+
+  <div class="proj-section">
+    <h2>Tech Stack</h2>
+    <div class="proj-tags">
+      <span class="proj-tag">Unity3D</span>
+      <span class="proj-tag">Desktop Testing</span>
+      <span class="proj-tag">CI Integration</span>
+      <span class="proj-tag">Test Automation</span>
+      <span class="proj-tag">Regression Testing</span>
+      <span class="proj-tag">JIRA</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
