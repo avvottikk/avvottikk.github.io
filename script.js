@@ -135,9 +135,9 @@ class VisitCounter {
 
   constructor({ elementId = 'visitCount', namespace, key } = {}) {
     this.#el = document.getElementById(elementId);
-    fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`)
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
       .then(r => r.json())
-      .then(d => this.#animateCount(d.count ?? d.value ?? d.hit ?? 0))
+      .then(d => this.#animateCount(d.value ?? 0))
       .catch(() => { this.#el.textContent = '—'; });
   }
 
@@ -525,7 +525,7 @@ class App {
     new MobileMenu();
     new ActiveNavHighlight();
     new MusicPlayer({ volume: 0.45 });
-    new VisitCounter({ namespace: 'artemkharin', key: 'portfolio' });
+    new VisitCounter({ namespace: 'avvottikk.github.io', key: 'visits' });
     new StatCounter();
     new SkillTagStagger();
     new HeroParallax();
