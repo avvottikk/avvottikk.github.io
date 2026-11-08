@@ -167,45 +167,6 @@ class Navigation {
   }
 }
 
-class MusicPlayer {
-  #audio;
-  #btn;
-  #started = false;
-
-  constructor({ audioId = 'bgMusic', btnId = 'musicBtn', volume = 0.45 } = {}) {
-    this.#audio        = document.getElementById(audioId);
-    this.#btn          = document.getElementById(btnId);
-    this.#audio.volume = volume;
-
-    ['click', 'scroll', 'keydown', 'touchstart'].forEach(ev =>
-      document.addEventListener(ev, () => this.#autoStart(), { once: true, passive: true })
-    );
-
-    this.#btn.addEventListener('click', e => {
-      e.stopPropagation();
-      this.toggle();
-    });
-  }
-
-  #autoStart() {
-    if (this.#started) return;
-    this.#audio.play()
-      .then(() => { this.#started = true; this.#btn.classList.add('playing'); })
-      .catch(() => {});
-  }
-
-  toggle() {
-    this.#started = true;
-    if (this.#audio.paused) {
-      this.#audio.play();
-      this.#btn.classList.add('playing');
-    } else {
-      this.#audio.pause();
-      this.#btn.classList.remove('playing');
-    }
-  }
-}
-
 class StatCounter {
   constructor(selector = '.stat-number', initialDelay = 650) {
     setTimeout(() => {
@@ -524,7 +485,6 @@ class App {
     new Navigation();
     new MobileMenu();
     new ActiveNavHighlight();
-    new MusicPlayer({ volume: 0.45 });
     new VisitCounter({ namespace: 'avvottikk.github.io', key: 'visits' });
     new StatCounter();
     new SkillTagStagger();

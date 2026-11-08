@@ -577,56 +577,6 @@ footer a:hover { color: var(--text); }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-.music-btn {
-  position: fixed; bottom: 28px; right: 32px; z-index: 800;
-  width: 44px; height: 44px;
-  background: rgba(10,10,10,0.65);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
-}
-
-.music-btn:hover {
-  border-color: var(--border-h);
-  background: rgba(20,20,20,0.8);
-  transform: scale(1.08);
-}
-
-.music-btn:active { transform: scale(0.96); }
-
-.music-bars {
-  display: flex; align-items: flex-end; gap: 2.5px; height: 16px;
-}
-
-.music-bars span {
-  display: block; width: 3px; border-radius: 2px;
-  background: var(--muted);
-  transition: background 0.2s ease;
-}
-
-.music-bars span:nth-child(1) { height: 6px; }
-.music-bars span:nth-child(2) { height: 12px; }
-.music-bars span:nth-child(3) { height: 9px; }
-.music-bars span:nth-child(4) { height: 5px; }
-
-.music-btn.playing .music-bars span {
-  background: #ffffff;
-  animation: bar-dance 0.9s ease-in-out infinite alternate;
-}
-
-.music-btn.playing .music-bars span:nth-child(1) { animation-duration: 0.7s; animation-delay: 0.0s; }
-.music-btn.playing .music-bars span:nth-child(2) { animation-duration: 0.9s; animation-delay: 0.15s; }
-.music-btn.playing .music-bars span:nth-child(3) { animation-duration: 0.6s; animation-delay: 0.05s; }
-.music-btn.playing .music-bars span:nth-child(4) { animation-duration: 0.8s; animation-delay: 0.25s; }
-
-@keyframes bar-dance {
-  from { transform: scaleY(0.3); }
-  to   { transform: scaleY(1.0); }
-}
-
 @media not (hover: hover) and (pointer: fine) {
   .btn-primary:hover,
   .btn-secondary:hover,
@@ -638,7 +588,6 @@ footer a:hover { color: var(--text); }
   .reveal.visible { transform: none; }
   .scroll-line { animation: none; opacity: 0.4; }
   .hero-badge::before { animation: none; }
-  .music-btn.playing .music-bars span { animation: none; }
   .btn-primary, .btn-secondary, .nav-cta { transition: background 0.15s ease, border-color 0.15s ease; }
 }
 
