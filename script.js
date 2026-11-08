@@ -135,7 +135,7 @@ class VisitCounter {
 
   constructor({ elementId = 'visitCount', namespace, key } = {}) {
     this.#el = document.getElementById(elementId);
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    fetch(`https://abacus.jasoncameron.dev/hit/${namespace}/${key}`)
       .then(r => r.json())
       .then(d => this.#animateCount(d.value ?? 0))
       .catch(() => { this.#el.textContent = '—'; });
